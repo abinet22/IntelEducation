@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+   
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        table {
+          border-collapse: collapse;
+          width: 100%;
+        }
+        
+        th, td {
+          padding: 8px;
+          text-align: left;
+          border-bottom: 1px solid #ddd;
+        }
+        
+        #searchInput {
+          margin-bottom: 10px;
+        }
+      </style>
+    <style>
+
+        .option-input {
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          -ms-appearance: none;
+          -o-appearance: none;
+          appearance: none;
+          position: relative;
+          top: 13.33333px;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          height: 40px;
+          width: 40px;
+          transition: all 0.15s ease-out 0s;
+          background: #cbd1d8;
+          border: none;
+          color: #fff;
+          cursor: pointer;
+          display: inline-block;
+          margin-right: 0.5rem;
+          outline: none;
+          position: relative;
+          z-index: 1000;
+        }
+        .option-input:hover {
+          background: #9faab7;
+        }
+        .option-input:checked {
+          background: #40e0d0;
+        }
+        .option-input:checked::before {
+          width: 40px;
+          height: 40px;
+          display:flex;
+          content: '\f00c';
+          font-size: 25px;
+          font-weight:bold;
+          position: absolute;
+          align-items:center;
+          justify-content:center;
+          font-family:'Font Awesome 5 Free';
+        }
+        .option-input:checked::after {
+          -webkit-animation: click-wave 0.65s;
+          -moz-animation: click-wave 0.65s;
+          animation: click-wave 0.65s;
+          background: #40e0d0;
+          content: '';
+          display: block;
+          position: relative;
+          z-index: 100;
+        }
+        .option-input.radio {
+          border-radius: 10%;
+        }
+        .option-input.radio::after {
+          border-radius: 10%;
+        }
+        
+        
+        
+        
+        
+        
+        </style>
+        
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <!-- <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div> -->
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+ 
+    <%- include ('./partials/header') %>
+    <!-- Navbar End -->
+
+
+    <!-- Header Start -->
+    <div class="container-fluid bg-primary py-5 mb-5 page-header">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <h1 class="display-3 text-white animated slideInDown">Acadamics</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
+                       
+                            <li class="breadcrumb-item text-white " aria-current="page">Acadamics</li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Grade 1-8 Tutor</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+   
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+    
+        <div class="container mt-5">
+           
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 10%;" aria-valuenow="10" aria-valuemin="0"
+                  aria-valuemax="100">Step 1</div>
+              </div>
+            <form action="/totor-request-form" method="post">
+                
+          
+                <div class="card mt-5 active-card">
+                  <div class="card-body col-md-6 offset-md-3">
+                    <h5 class="card-title">Who needs tutoring?</h5>
+                  
+                    <div class="radio-group">
+                        <label for="option1"><input class="option-input radio" type="radio" name="question1" id="option1" value="option1">I do</label>
+                      <br>
+                      <label for="option2">    <input class="option-input radio" type="radio" name="question1" id="option2" value="option2">My child</label>
+                      <br>  <label for="option3"><input  class="option-input radio" type="radio" name="question1" id="option3" value="option3">Someone else</label>
+                        
+                    </div>
+                 
+                    <button class="btn btn-primary next-btn">Next</button>
+                  </div>
+                </div>
+          
+                <!-- Repeat the above card structure for the remaining steps (Step 2 to Step 10) -->
+                <div class="card mt-5">
+                  <div class="card-body col-md-6 offset-md-3">
+                    <h5 class="card-title">What prompted you to seek tutoring?</h5>
+                    <div class="radio-group">
+                        <label for="option1"><input class="option-input radio" type="radio" name="question2" id="option1" value="option1">I need help with a class</label>
+                      <br>
+                      <label for="option2">    <input class="option-input radio" type="radio" name="question2" id="option2" value="option2">I'm preparing for a test</label>
+                      <br>  <label for="option3"><input  class="option-input radio" type="radio" name="question2" id="option3" value="option3">I want to learn something new</label>
+                      <br>  <label for="option4"><input  class="option-input radio" type="radio" name="question2" id="option4" value="option4">Other</label>
+                        
+                    </div>
+                    <button class="btn btn-primary next-btn">Next</button>
+                  </div>
+                </div>
+                <div class="card mt-5">
+                    <div class="card-body col-md-6 offset-md-3">
+                      <h5 class="card-title">How soon would you like to get started?</h5>
+                      <div class="radio-group">
+                        <label for="option1"><input class="option-input radio" type="radio" name="question3" id="option1" value="option1">Right away</label>
+                      <br>
+                      <label for="option2">    <input class="option-input radio" type="radio" name="question3" id="option2" value="option2">In a few weeks</label>
+                      <br>  <label for="option3"><input  class="option-input radio" type="radio" name="question3" id="option3" value="option3">Not Sure</label>
+                       
+                    </div>
+                      <button class="btn btn-primary next-btn">Next</button>
+                    </div>
+                  </div>
+                  <div class="card mt-5">
+                    <div class="card-body col-md-6 offset-md-3">
+                      <h5 class="card-title">Let's finish up your profile so we can find you the perfect tutor:</h5>
+                      <div class="form-group">
+                        <label for="">Full Name</label>
+                        <input class="form-control"  type="text" name="fullname" id="fullname" >
+                      </div>
+                   
+                      <button class="btn btn-primary next-btn">Next</button>
+                    </div>
+                  </div>
+                  <div class="card mt-5">
+                    <div class="card-body col-md-6  offset-md-3">
+                      <h5 class="card-title">Interested In</h5>
+                      <div class="form-group">
+                        <select name="tutorTypes" class="form-control" multiple>
+                            <option value="math">Math</option>
+                            <option value="science">Science</option>
+                            <option value="english">English</option>
+                            <option value="history">History</option>
+                            <option value="languages">Languages</option>
+                          </select>
+                          
+                      </div>
+                    
+                      <button class="btn btn-primary next-btn">Next</button>
+                    </div>
+                  </div>
+                  <div class="card mt-5">
+                    <div class="card-body col-md-6 offset-md-3">
+                        <h5 class="card-title">Contact Info</h5>
+                        <div class="form-group">
+                          <label for="option4">Phone Number</label>
+                          <input class="form-control" type="text" name="phonenumber" id="phonenumber" >
+                        </div>
+                        <div class="form-group">
+                          <label for="option4">Address</label>
+                          <input class="form-control" type="text" name="address" id="address" >
+                        </div>
+                      <button class="btn btn-primary next-btn">Submit</button>
+                    </div>
+                  </div>
+              </form>
+          </div>
+        
+        
+       
+    </div>
+    <section class=" py-5 bg-primary" style="height: 20px;">
+      
+    </section>
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+                <h6 class="section-title bg-white text-center text-primary px-3">Search Tutors</h6>
+                <h1 class="mb-5">Filter By Subjects</h1>
+            </div>
+            <div>
+                <input type="text" id="searchInput" placeholder="Search Tutors By Subject">
+  
+                <table id="myTable" class="table table-responsive">
+                  <thead>
+                    <tr>
+                      <th>Instructors</th>
+                      <th></th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  
+                    <tr>
+                        <td>  <div class="tutor-card-mex-11361" data-component="tutor_card_mex11361">
+                          <div class="tutor-card-header">
+                            
+                            <a class="tutor-card-avatar" href="/tutors/878389735">
+                                <div style="position: relative; display: inline-block;">
+                                    <img src="/img/default.jpg" height="150px" width="150px" class="img-fluid">
+                             
+                                    <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Certified checkmark" style="position: absolute; top: 0; right: 0;">
+                                        <g>
+                                          <path d="M26.3179 12.1173L26.2935 12.0939L26.2675 12.0722L25.8425 11.7175C25.6518 11.5012 25.6099 11.2038 25.688 11.006L25.9379 10.4532L25.9485 10.43L25.9578 10.4062C26.5064 9.00669 25.7654 7.37181 24.2779 6.93831L24.2778 6.93828L23.6778 6.76349L23.6694 6.76104L23.6609 6.75873C23.476 6.70835 23.3016 6.53928 23.2821 6.2195L23.2821 6.2195L23.2815 6.21082L23.2395 5.60981C23.1632 4.07354 21.7822 2.92078 20.2373 3.19445L19.6599 3.2787C19.3903 3.31386 19.1544 3.17474 19.0677 2.99791L19.0612 2.98449L19.0542 2.97128L18.7603 2.41447C18.0464 0.979909 16.2764 0.622309 15.0686 1.48101L14.564 1.82437L14.5567 1.82933L14.5495 1.83442C14.3386 1.98346 14.0722 1.98365 13.8607 1.83427L13.8536 1.82926L13.8464 1.82437L13.346 1.48388C12.0725 0.56042 10.3096 1.00461 9.60799 2.41416L9.31417 2.97077C9.31413 2.97084 9.31409 2.97091 9.31406 2.97098C9.21047 3.16684 8.95745 3.28058 8.77424 3.24588L8.18335 3.1167L8.16793 3.11333L8.15241 3.11045C6.59879 2.82187 5.20543 3.97896 5.12873 5.52188L5.08676 6.12293L5.08675 6.12293L5.08647 6.12718C5.06975 6.38237 4.87151 6.6145 4.6647 6.67074L4.65604 6.67309L4.64742 6.6756L4.04744 6.85039L4.04705 6.85051C2.56014 7.28433 1.81878 8.91893 2.36749 10.3184L2.3768 10.3421L2.38731 10.3653L2.63168 10.9058C2.73192 11.1833 2.64356 11.4548 2.48151 11.5947L2.01466 11.9844L1.98861 12.0061L1.9641 12.0296C0.866896 13.0794 0.866605 14.8303 1.9643 15.8801L1.96975 15.8853L1.97528 15.8904L2.42566 16.3083C2.62833 16.5257 2.67421 16.8327 2.59419 17.0353L2.34426 17.588L2.33374 17.6113L2.32442 17.6351C1.77585 19.0345 2.51675 20.6693 4.00407 21.1029C4.00414 21.1029 4.00422 21.1029 4.00429 21.103L4.60436 21.278L4.61294 21.2805L4.62157 21.2828C4.80653 21.3332 4.98091 21.5023 5.00044 21.8221L5.0004 21.8221L5.00104 21.8312L5.04329 22.432C5.11974 23.9682 6.50073 25.1208 8.04555 24.8471L8.62281 24.7629C8.89246 24.7277 9.12836 24.8668 9.21506 25.0437L9.22163 25.0571L9.2286 25.0703L9.52687 25.6353C10.2347 27.0003 11.9943 27.4324 13.2609 26.5141L13.7613 26.1736L13.7686 26.1686L13.7758 26.1635C13.9867 26.0145 14.253 26.0143 14.4646 26.1637L14.4717 26.1687L14.4788 26.1736L14.9693 26.5073C16.2325 27.4649 17.9657 26.9542 18.6968 25.6655L18.7261 25.6138L18.7491 25.5591L18.9841 24.9992C19.0958 24.8201 19.3337 24.7184 19.5083 24.7515L20.0992 24.8806L20.1146 24.884L20.1301 24.8869C21.6838 25.1755 23.0771 24.0184 23.1538 22.4754L23.1958 21.8744L23.1961 21.8702C23.2128 21.615 23.411 21.3828 23.6178 21.3266L23.6266 21.3242L23.6352 21.3217L24.2349 21.1469L24.2352 21.1468C25.7221 20.713 26.4634 19.0784 25.9147 17.679L25.9054 17.6552L25.8949 17.632L25.6505 17.0915C25.5503 16.814 25.6387 16.5426 25.8007 16.4026L26.2676 16.0129L26.2936 15.9912L26.3181 15.9678C27.4153 14.9179 27.4156 13.167 26.3179 12.1173Z" fill="#40C0AB" stroke="white" stroke-width="2"></path>
+                                        </g>
+                                        <g style="transform: translate(8px, 9px)">
+                                          <path d="M4.27823 7.32836L1.82084 4.8209L1.00171 5.65672L4.27823 9L11.2993 1.83582L10.4802 1L4.27823 7.32836Z" fill="white" stroke="white"></path>
+                                        </g>
+                                      </svg>
+                                </div>
+                              
+                               
+                            </a>
+                            <div class="tutor-card-title">
+                              <h3><a href="/tutors/878389735">Meron</a></h3>
+                            </div>
+                            <span class="tutor-card-subtitle">
+                              Certified Science Tutor 
+                            </span>
+                          </div></td>
+                          <td>
+                          <div class="tutor-card-body">
+                            <div class="tutor-card-body-bio">
+                              <h4>Biography</h4>
+                              <p>
+                                ...South Bronx to a prep school in Connecticut. In mathematics in particular I have strong experience working with students who have learning disabilities. I'm near-fluent in German and Spanish, have a year of Chinese under my belt, and have introductory familiarity with Turkish, Korean, French, Italian, and Japanese. If you ever need a conversation practice...
+                                <a href="/tutors/878389735">Read more</a>
+                              </p>
+                                <p>
+                                  <strong>Can also tutor:</strong> <a href="/computer_science-tutors" class="link ">Computer Science</a>, <a href="/act_english-tutors" class="link ">ACT English</a>, <a href="/german-tutors" class="link ">German</a> and 81 more subjects.
+                                </p>
+                            </div>
+                        
+                              <div class="tutor-card-body-education">
+                                <h4>Education</h4>
+                                <ul>
+                                    <li><a class="gallery_link" href="/">AA University</a> - Bachelor in Arts, Computer Science</li>
+                                </ul>
+                              </div>
+                        </td>
+                        <td>
+                              <div class="tutor-card-body-scores">
+                                <h4>Rating</h4>
+                                <ul>
+                                    <li>ACT Composite: 35</li>
+                                    <li>ACT English: 35</li>
+                                    <li>ACT Math: 34</li>
+                                </ul>
+                              </div>
+                      
+                          </div>
+                          <div class="tutor-card-footer">
+                            <button class="button button--primary button--arrow js-scroll-trigger js-get-started">Get started</button>
+                          </div>
+                        </div></td>
+                      
+                      </tr>
+                      
+                    <tr>
+                        <td>  <div class="tutor-card-mex-11361" data-component="tutor_card_mex11361">
+                          <div class="tutor-card-header">
+                            
+                            <a class="tutor-card-avatar" href="/tutors/878389735">
+                                <div style="position: relative; display: inline-block;">
+                                    <img src="/img/default.jpg" height="150px" width="150px" class="img-fluid">
+                             
+                                    <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Certified checkmark" style="position: absolute; top: 0; right: 0;">
+                                        <g>
+                                          <path d="M26.3179 12.1173L26.2935 12.0939L26.2675 12.0722L25.8425 11.7175C25.6518 11.5012 25.6099 11.2038 25.688 11.006L25.9379 10.4532L25.9485 10.43L25.9578 10.4062C26.5064 9.00669 25.7654 7.37181 24.2779 6.93831L24.2778 6.93828L23.6778 6.76349L23.6694 6.76104L23.6609 6.75873C23.476 6.70835 23.3016 6.53928 23.2821 6.2195L23.2821 6.2195L23.2815 6.21082L23.2395 5.60981C23.1632 4.07354 21.7822 2.92078 20.2373 3.19445L19.6599 3.2787C19.3903 3.31386 19.1544 3.17474 19.0677 2.99791L19.0612 2.98449L19.0542 2.97128L18.7603 2.41447C18.0464 0.979909 16.2764 0.622309 15.0686 1.48101L14.564 1.82437L14.5567 1.82933L14.5495 1.83442C14.3386 1.98346 14.0722 1.98365 13.8607 1.83427L13.8536 1.82926L13.8464 1.82437L13.346 1.48388C12.0725 0.56042 10.3096 1.00461 9.60799 2.41416L9.31417 2.97077C9.31413 2.97084 9.31409 2.97091 9.31406 2.97098C9.21047 3.16684 8.95745 3.28058 8.77424 3.24588L8.18335 3.1167L8.16793 3.11333L8.15241 3.11045C6.59879 2.82187 5.20543 3.97896 5.12873 5.52188L5.08676 6.12293L5.08675 6.12293L5.08647 6.12718C5.06975 6.38237 4.87151 6.6145 4.6647 6.67074L4.65604 6.67309L4.64742 6.6756L4.04744 6.85039L4.04705 6.85051C2.56014 7.28433 1.81878 8.91893 2.36749 10.3184L2.3768 10.3421L2.38731 10.3653L2.63168 10.9058C2.73192 11.1833 2.64356 11.4548 2.48151 11.5947L2.01466 11.9844L1.98861 12.0061L1.9641 12.0296C0.866896 13.0794 0.866605 14.8303 1.9643 15.8801L1.96975 15.8853L1.97528 15.8904L2.42566 16.3083C2.62833 16.5257 2.67421 16.8327 2.59419 17.0353L2.34426 17.588L2.33374 17.6113L2.32442 17.6351C1.77585 19.0345 2.51675 20.6693 4.00407 21.1029C4.00414 21.1029 4.00422 21.1029 4.00429 21.103L4.60436 21.278L4.61294 21.2805L4.62157 21.2828C4.80653 21.3332 4.98091 21.5023 5.00044 21.8221L5.0004 21.8221L5.00104 21.8312L5.04329 22.432C5.11974 23.9682 6.50073 25.1208 8.04555 24.8471L8.62281 24.7629C8.89246 24.7277 9.12836 24.8668 9.21506 25.0437L9.22163 25.0571L9.2286 25.0703L9.52687 25.6353C10.2347 27.0003 11.9943 27.4324 13.2609 26.5141L13.7613 26.1736L13.7686 26.1686L13.7758 26.1635C13.9867 26.0145 14.253 26.0143 14.4646 26.1637L14.4717 26.1687L14.4788 26.1736L14.9693 26.5073C16.2325 27.4649 17.9657 26.9542 18.6968 25.6655L18.7261 25.6138L18.7491 25.5591L18.9841 24.9992C19.0958 24.8201 19.3337 24.7184 19.5083 24.7515L20.0992 24.8806L20.1146 24.884L20.1301 24.8869C21.6838 25.1755 23.0771 24.0184 23.1538 22.4754L23.1958 21.8744L23.1961 21.8702C23.2128 21.615 23.411 21.3828 23.6178 21.3266L23.6266 21.3242L23.6352 21.3217L24.2349 21.1469L24.2352 21.1468C25.7221 20.713 26.4634 19.0784 25.9147 17.679L25.9054 17.6552L25.8949 17.632L25.6505 17.0915C25.5503 16.814 25.6387 16.5426 25.8007 16.4026L26.2676 16.0129L26.2936 15.9912L26.3181 15.9678C27.4153 14.9179 27.4156 13.167 26.3179 12.1173Z" fill="#40C0AB" stroke="white" stroke-width="2"></path>
+                                        </g>
+                                        <g style="transform: translate(8px, 9px)">
+                                          <path d="M4.27823 7.32836L1.82084 4.8209L1.00171 5.65672L4.27823 9L11.2993 1.83582L10.4802 1L4.27823 7.32836Z" fill="white" stroke="white"></path>
+                                        </g>
+                                      </svg>
+                                </div>
+                              
+                               
+                            </a>
+                            <div class="tutor-card-title">
+                              <h3><a href="/tutors/878389735">Marta</a></h3>
+                            </div>
+                            <span class="tutor-card-subtitle">
+                              Certified Science Tutor 
+                            </span>
+                          </div></td>
+                          <td>
+                          <div class="tutor-card-body">
+                            <div class="tutor-card-body-bio">
+                              <h4>Biography</h4>
+                              <p>
+                                ...South Bronx to a prep school in Connecticut. In mathematics in particular I have strong experience working with students who have learning disabilities. I'm near-fluent in German and Spanish, have a year of Chinese under my belt, and have introductory familiarity with Turkish, Korean, French, Italian, and Japanese. If you ever need a conversation practice...
+                                <a href="/tutors/878389735">Read more</a>
+                              </p>
+                                <p>
+                                  <strong>Can also tutor:</strong> <a href="/computer_science-tutors" class="link ">Computer Science</a>, <a href="/act_english-tutors" class="link ">ACT English</a>, <a href="/german-tutors" class="link ">German</a> and 81 more subjects.
+                                </p>
+                            </div>
+                        
+                              <div class="tutor-card-body-education">
+                                <h4>Education</h4>
+                                <ul>
+                                    <li><a class="gallery_link" href="/">Adama University </a> - Bachelor in Arts, Computer Science</li>
+                                </ul>
+                              </div>
+                        </td>
+                        <td>
+                              <div class="tutor-card-body-scores">
+                                <h4>Rating</h4>
+                                <ul>
+                                    <li>ACT Composite: 35</li>
+                                    <li>ACT English: 35</li>
+                                    <li>ACT Math: 34</li>
+                                </ul>
+                              </div>
+                      
+                          </div>
+                          <div class="tutor-card-footer">
+                            <button class="button button--primary button--arrow js-scroll-trigger js-get-started">Get started</button>
+                          </div>
+                        </div></td>
+                      
+                      </tr>
+                    <!-- Add more rows as needed -->
+                  </tbody>
+                </table>
+            </div>
+           
+        </div>
+    </div>
+    <!-- 404 End -->
+        
+
+    <!-- Footer Start -->
+   
+    <%- include ('./partials/footer') %>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script>
+            document.addEventListener('DOMContentLoaded', function () {
+      var currentStep = 1;
+      var form = document.querySelector('form');
+      var cards = Array.from(form.querySelectorAll('.card'));
+
+      cards.forEach(function (card) {
+        card.style.display = 'none';
+      });
+
+      cards[currentStep - 1].style.display = 'block';
+
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        if (currentStep < cards.length) {
+          cards[currentStep - 1].style.display = 'none';
+          currentStep++;
+          cards[currentStep - 1].style.display = 'block';
+          updateProgressBar();
+        }else{
+            form.submit();
+        }
+      });
+
+      function updateProgressBar() {
+        var progressPercentage = (currentStep / cards.length) * 100;
+        var progressBar = document.querySelector('.progress-bar');
+        progressBar.style.width = progressPercentage + '%';
+        progressBar.textContent = 'Step ' + currentStep;
+      }
+    });
+      </script></body>
+
+</html>

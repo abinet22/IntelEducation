@@ -1,0 +1,303 @@
+
+<html lang="en" class="ie_11_scroll">
+   <head>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+<style>
+  
+.stepwizard-step p {
+    margin-top: 10px;
+}
+.stepwizard-row {
+    display: table-row;
+}
+.stepwizard {
+    display: table;
+    width: 100%;
+    position: relative;
+}
+.stepwizard-step button[disabled] {
+    opacity: 1 !important;
+    filter: alpha(opacity=100) !important;
+}
+.stepwizard-row:before {
+    top: 14px;
+    bottom: 0;
+    position: absolute;
+    content: " ";
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    z-order: 0;
+}
+.stepwizard-step {
+    display: table-cell;
+    text-align: center;
+    position: relative;
+}
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 12px;
+    line-height: 1.428571429;
+    border-radius: 15px;
+}
+</style>
+<body>
+        <!-- Top menu -->
+        <%- include ('./partials/header') %>
+       
+      
+        
+        <div class="container-xxl mt-5">
+          <div id="container">
+            <!-- Tabs Titles -->
+        
+       
+          <%- include ('./partials/messages') %>
+            <!-- Login Form -->
+            <div class="text-center">
+                <h6 class="section-title bg-white text-center text-primary px-3">Entel Education Application Form</h6>
+                <h1 class="mb-5"></h1>
+            </div>
+            <div class="col-md-10 offset-md-1">
+             
+                <div class="container"></div>,<div class="container">
+  
+                    <div class="stepwizard ">
+                        <div class="stepwizard-row setup-panel">
+                          <div class="stepwizard-step">
+                            <a href="#step-1" type="button" class="btn btn-primary btn-circle">1</a>
+                            <p>Step 1</p>
+                          </div>
+                          <div class="stepwizard-step">
+                            <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
+                            <p>Step 2</p>
+                          </div>
+                          <div class="stepwizard-step">
+                            <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
+                            <p>Step 3</p>
+                          </div>
+                          <div class="stepwizard-step">
+                            <a href="#step-4" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
+                            <p>Step 4</p>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <form role="form" action="/applytobecometutor" method="post">
+                        <div class="row setup-content" id="step-1">
+                          <div class="col-xs-6 col-md-offset-3">
+                            <div class="col-md-12">
+                              <h3> Contact Information</h3>
+                              <div class="form-group">
+                                <label class="control-label">First Name</label>
+                                <input maxlength="100" type="text" required="required" name="firstname" id="firstname" class="form-control" placeholder="Enter First Name">
+                              </div>
+                              <div class="form-group">
+                                <label class="control-label">Last Name</label>
+                                <input maxlength="100" type="text" required="required" name="lastname" id="lastname" class="form-control" placeholder="Enter Last Name">
+                              </div>
+                              <div class="form-group">
+                                <label class="control-label">Phone Number</label>
+                                <input maxlength="100" type="text" required="required" id="phonenumber"  pattern="09\d{8}" name="phonenumber" class="form-control" placeholder="Enter Phone Number(Start With 09)">
+                              </div>
+                              <div class="form-group">
+                                <label class="control-label">Address</label>
+                                <input required="required" class="form-control" name="address" id="address" placeholder="Enter your address">
+                              </div>
+                              <button class="btn btn-primary nextBtn btn-lg pull-right" type="button">Next</button>
+                            </div>
+                          </div>
+                        </div>
+                    
+                        <div class="row setup-content" id="step-2">
+                            <div class="col-xs-6 col-md-offset-3">
+                                <div class="col-md-12">
+                                  <h3>Educational Background</h3>
+                                  <div class="form-group">
+                                    <label class="control-label">Educational Background</label>
+                                    <select name="educational_background" id="educational_background" class="form-control">
+                                        <option value="0">Select your educational background</option>
+                                        <option value="high_school">High School</option>
+                                        <option value="diploma">Diploma</option>
+                                        <option value="bachelor">Bachelor's Degree</option>
+                                        <option value="master">Master's Degree</option>
+                                        <option value="doctorate">Doctorate Degree</option>
+                                        <option value="other">Other</option>
+                                      </select>
+                                      
+                                  </div>
+                                  <div class="form-group">
+                                    <label class="control-label">Profession </label>
+                                 
+                                    <select name="study_area_or_profession" id="study_area_or_profession" class="form-control">
+                                        <option value="">Select your study area or profession</option>
+                                        <option value="engineering">Engineering</option>
+                                        <option value="medicine">Medicine</option>
+                                        <option value="business">Business</option>
+                                        <option value="computer_science">Computer Science</option>
+                                        <option value="art">Art</option>
+                                        <option value="law">Law</option>
+                                        <option value="education">Education</option>
+                                        <option value="other">Other</option>
+                                      </select>
+                                      
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Upload Document(Educational,Licence ) <code>use only pdf</code></label>
+                                    <input type="file" name="educational_documents" accept=".pdf,.doc,.docx" />
+
+                                      
+                                </div>
+                                  <button class="btn btn-primary prevBtn btn-lg pull-left" type="button">Previous</button>
+                                  <button class="btn btn-primary nextBtn btn-lg pull-right" type="button">Next</button>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="row setup-content" id="step-3">
+                            <div class="col-xs-6 col-md-offset-3">
+                              <div class="col-md-12">
+                                <h3> Experience</h3>
+                                <div class="form-group">
+                                  <label class="control-label">Intersted In?</label>
+                                  <input maxlength="200" type="text" required="required" name="interestedin" id="interestedin" class="form-control" placeholder="Interested In?">
+                                </div>
+                                
+                                <div class="form-group" >
+                                    <select name="experience" class="form-control" id="experience">
+                                        <option value="0">Please Select Expireance Level</option>
+                                        <option value="beginner">Beginner</option>
+                                        <option value="intermediate">Intermediate</option>
+                                        <option value="advanced">Advanced</option>
+                                      </select>
+                                      
+                                </div>
+                                <button class="btn btn-primary prevBtn btn-lg pull-left" type="button">Previous</button>
+                                <button class="btn btn-primary nextBtn btn-lg pull-right" type="button">Next</button>
+                              </div>
+                            </div>
+                          </div>
+                        <div class="row setup-content" id="step-4">
+                            <div class="col-xs-6 col-md-offset-3">
+                              <div class="col-md-12">
+                                <h3> Review</h3>
+                                <h2>Your information:</h2>
+                                <p><strong>Name:</strong> <span id="first-name"></span> &nbsp; <span id="last-name"></span></p>
+                                <p><strong>Phone:</strong> <span id="phone-number"></span></p>
+                                <p><strong>Address:</strong> <span id="addressl"></span></p>
+                                <p><strong>Educational Background:</strong> <span id="edu-background"></span></p>
+                                <p><strong>Profession:</strong> <span id="profession"></span></p>
+                                <p><strong>Interested In?:</strong> <span id="interested-in"></span></p>
+                                <p><strong>Experience:</strong> <span id="exp"></span></p>
+                                <button class="btn btn-primary prevBtn btn-lg pull-left" type="button">Previous</button>
+                                <button class="btn btn-success btn-lg pull-right" type="submit">Submit</button>
+                              </div>
+                            </div>
+                          </div>
+                      </form>
+                      
+                    </div>
+             
+            </div>
+          
+        
+          
+          </div>
+        </div>
+    
+       <%- include ('./partials/footer') %>
+        <!-- require plugins -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script>
+        $(document).ready(function () {
+  var navListItems = $('div.setup-panel div a'),
+          allWells = $('.setup-content'),
+          allNextBtn = $('.nextBtn'),
+  		  allPrevBtn = $('.prevBtn');
+
+  allWells.hide();
+
+  navListItems.click(function (e) {
+      e.preventDefault();
+      var $target = $($(this).attr('href')),
+              $item = $(this);
+
+      if (!$item.hasClass('disabled')) {
+          navListItems.removeClass('btn-primary').addClass('btn-default');
+          $item.addClass('btn-primary');
+          allWells.hide();
+          $target.show();
+          $target.find('input:eq(0)').focus();
+      }
+  });
+  
+  allPrevBtn.click(function(){
+      var curStep = $(this).closest(".setup-content"),
+          curStepBtn = curStep.attr("id"),
+          prevStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().prev().children("a");
+
+          prevStepWizard.removeAttr('disabled').trigger('click');
+  });
+
+  allNextBtn.click(function(){
+      var curStep = $(this).closest(".setup-content"),
+          curStepBtn = curStep.attr("id"),
+          nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
+          curInputs = curStep.find("input[type='text'],input[type='url']"),
+          isValid = true;
+          document.getElementById('first-name').textContent = document.getElementById('firstname').value;
+          document.getElementById('last-name').textContent = document.getElementById('lastname').value;
+          document.getElementById('phone-number').textContent = document.getElementById('phonenumber').value;
+          document.getElementById('addressl').textContent = document.getElementById('address').value;
+          document.getElementById('edu-background').textContent = document.getElementById('educational_background').value;
+          document.getElementById('profession').textContent = document.getElementById('study_area_or_profession').value;
+          document.getElementById('interested-in').textContent = document.getElementById('interestedin').value;
+          document.getElementById('exp').textContent = document.getElementById('experience').value;
+      $(".form-group").removeClass("has-error");
+      for(var i=0; i<curInputs.length; i++){
+          if (!curInputs[i].validity.valid){
+              isValid = false;
+              $(curInputs[i]).closest(".form-group").addClass("has-error");
+          }
+      }
+
+      if (isValid)
+          nextStepWizard.removeAttr('disabled').trigger('click');
+  });
+
+  $('div.setup-panel div a.btn-primary').trigger('click');
+});
+    </script>
+    </body>
+</html>

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+ 
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        table {
+          border-collapse: collapse;
+          width: 100%;
+        }
+        
+        th, td {
+          padding: 8px;
+          text-align: left;
+          border-bottom: 1px solid #ddd;
+        }
+        
+        #searchInput {
+          margin-bottom: 10px;
+        }
+      </style>
+    <style>
+
+        .option-input {
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          -ms-appearance: none;
+          -o-appearance: none;
+          appearance: none;
+          position: relative;
+          top: 13.33333px;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          height: 40px;
+          width: 40px;
+          transition: all 0.15s ease-out 0s;
+          background: #cbd1d8;
+          border: none;
+          color: #fff;
+          cursor: pointer;
+          display: inline-block;
+          margin-right: 0.5rem;
+          outline: none;
+          position: relative;
+          z-index: 1000;
+        }
+        .option-input:hover {
+          background: #9faab7;
+        }
+        .option-input:checked {
+          background: #40e0d0;
+        }
+        .option-input:checked::before {
+          width: 40px;
+          height: 40px;
+          display:flex;
+          content: '\f00c';
+          font-size: 25px;
+          font-weight:bold;
+          position: absolute;
+          align-items:center;
+          justify-content:center;
+          font-family:'Font Awesome 5 Free';
+        }
+        .option-input:checked::after {
+          -webkit-animation: click-wave 0.65s;
+          -moz-animation: click-wave 0.65s;
+          animation: click-wave 0.65s;
+          background: #40e0d0;
+          content: '';
+          display: block;
+          position: relative;
+          z-index: 100;
+        }
+        .option-input.radio {
+          border-radius: 10%;
+        }
+        .option-input.radio::after {
+          border-radius: 10%;
+        }
+        
+        
+        
+        
+        
+        
+        </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <!-- <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div> -->
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+  
+    <%- include ('./partials/header') %>
+    <!-- Navbar End -->
+
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 mb-5">
+        <div class="owl-carousel header-carousel position-relative">
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="img/organization.jpg" alt="" style="height: 650px;">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(24, 29, 56, .7);">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-sm-10 col-lg-8">
+                                <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Entel Education: Empowering Education for Schools and Organizations
+                                </h5>
+                                  <h1 class="display-3 text-white animated slideInDown">  </h1>
+                                  <p class="fs-5 text-white mb-4 pb-2">
+                                    Unlock the potential of your educational institution or organization with Entel Education. We specialize in providing proven solutions tailored to meet your unique needs. Our customizable learning programs are designed to deliver exceptional results and empower students to thrive in their academic journey.
+                            
+                                </p>
+                                <a href="#more" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
+                                <a href="#contactus" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Contact Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <!-- Carousel End -->
+
+
+    <!-- Service Start -->
+ <section id="more">
+    <div class="container-xxl py-5" >
+        <div class="container">
+            <div class="container container--large"><div class="text-block text-block--center" data-component="text_block">
+                
+                    <div class="text-center">
+                        <h6 class="section-title bg-white text-center text-primary px-3">Teacher-Assigned Tutoring</h6>
+                        <h1 class="mb-5"></h1>
+                    </div>
+              </div>
+              <div class="">
+                <div class="">
+                  <h5 class="mb-3">Empowering Educators and Students</h5>
+                  <p>Experience the power of Teacher-Assigned Tutoring, a personalized support system that puts educators in control. With this innovative approach, teachers can schedule one-on-one sessions with tutors who specialize in reinforcing classroom instruction and addressing the specific needs of individual students.</p>
+                  <p>Enhancing Classroom Instruction: We believe that teachers are the experts when it comes to understanding their students' needs. That's why Teacher-Assigned Tutoring puts educators at the forefront, allowing them to collaborate with tutors who provide targeted support aligned with classroom instruction. This approach reinforces key concepts, bridges learning gaps, and helps students excel academically.</p>
+                  <p>Personalized Support: Every student is unique, and their learning journey should reflect that. Teacher-Assigned Tutoring offers personalized support tailored to the individual needs of each student. Tutors work closely with teachers to identify areas where students require additional assistance and create customized learning plans to address those needs effectively.</p>
+                  <p>Focused Attention: With Teacher-Assigned Tutoring, students receive undivided attention from tutors who are specifically assigned by their teachers. This focused approach ensures that tutors have a deep understanding of each student's strengths, weaknesses, and learning style, enabling them to provide targeted guidance and support.</p>
+                  <p>Seamless Integration: We understand the importance of seamless integration into the classroom environment. Teacher-Assigned Tutoring seamlessly integrates with existing curriculum and instructional strategies. Tutors work collaboratively with teachers to align their sessions with ongoing classroom activities, ensuring a cohesive and comprehensive learning experience for students.</p>
+                  <p>Progress Monitoring: Tracking student progress is crucial to ensure academic growth. With Teacher-Assigned Tutoring, educators can closely monitor students' development and assess the effectiveness of the tutoring sessions. This valuable feedback helps refine teaching strategies, identify areas of improvement, and celebrate student achievements.</p>
+                  <p>Empower your educators and students with Teacher-Assigned Tutoring, a powerful tool that enhances classroom instruction and provides personalized support. Together, we can create a learning environment where every student thrives and achieves their full potential.</p>
+                </div>
+              </div>
+              
+              
+              </div>
+           
+            </div>
+            
+        </div>
+        <div class="container-xxl py-5"  >
+            <div class="container" >
+                <div class="container container--large"><div class="text-block text-block--center" data-component="text_block">
+                    
+                        <div class="text-center">
+                            <h6 class="section-title bg-white text-center text-primary px-3">High-Dosage Tutoring</h6>
+                            <h1 class="mb-5"></h1>
+                        </div>
+                  </div>
+                  <div class="row">
+                    <div >
+                      <h5 class="mb-3"> Accelerating Student Progress</h5>
+                      <p>Experience the power of high-dosage tutoring, the most effective intervention to address unfinished learning. With Varsity Tutors for Schools, your district gains seamless access to 1-on-1 private tutoring and small group tutoring for up to 5 students. Our Live Learning Platform facilitates face-to-face sessions between students and tutors, providing interactive tools and collaborative workspaces for an engaging online experience.</p>
+                      <p>Research-Backed Effectiveness: Research overwhelmingly demonstrates that high-dosage tutoring yields significant academic improvement. It offers intensive and targeted support that helps students catch up, bridge learning gaps, and make substantial progress towards academic proficiency.</p>
+                      <p>Customized Learning Experience: Each student has unique learning needs, and high-dosage tutoring recognizes this individuality. Our tutors work closely with students, tailoring instruction to their specific strengths, weaknesses, and goals. By providing personalized attention and customized learning plans, we empower students to achieve their full potential.</p>
+                      <p>Engaging Online Environment: Our Live Learning Platform serves as a virtual classroom where students and tutors connect in real-time. The platform offers interactive tools, collaborative workspaces, and multimedia resources, fostering an engaging and dynamic online learning environment.</p>
+                      <p>Flexible Tutoring Options: Varsity Tutors for Schools offers both 1-on-1 private tutoring and small group tutoring, accommodating different learning preferences and objectives. Students can benefit from personalized attention in individual sessions or participate in small group settings, promoting peer collaboration and collective learning.</p>
+                      <p>Measurable Results: We prioritize monitoring student progress and assessing the effectiveness of tutoring sessions. Regular progress tracking enables educators to gauge student growth, identify areas of improvement, and make data-informed decisions to further optimize instruction.</p>
+                      <p>Empower your students with high-dosage tutoring through Varsity Tutors for Schools. Our research-backed approach, combined with our engaging online platform, ensures that students receive the targeted support they need to succeed academically and reach their full potential.</p>
+                    </div>
+                  </div>
+                  
+                  
+                  
+                  </div>
+               
+                </div>
+                
+            </div>
+
+
+            <div class="container-xxl py-5" >
+                <div class="container">
+                    <div class="container container--large"><div class="text-block text-block--center" data-component="text_block">
+                        
+                            <div class="text-center">
+                                <h6 class="section-title bg-white text-center text-primary px-3">Unlimited Summer Learning</h6>
+                                <h1 class="mb-5"></h1>
+                            </div>
+                      </div>
+                      <div class="">
+                        <div class="">
+                          <h5 class="mb-3"> Empowering Students Beyond the Classroom</h5>
+                          <p>Combat the summer slide with a fun twist by bringing together the best of both academic and enrichment experiences. Unlimited Summer Learning is designed to help districts deliver a robust summer learning program for K-8 students. With our all-access online pass, students gain access to a wide range of live and on-demand classes and camps.</p>
+                          <p>Comprehensive Summer Program: Our Unlimited Summer Learning program goes beyond traditional academics. It combines engaging academic courses with exciting enrichment activities to create a well-rounded summer experience for students. From science and math to arts and sports, students have the opportunity to explore their interests and develop new skills.</p>
+                          <p>Advanced Summer Program: For students looking to take their summer learning to the next level, our Advanced Summer program offers a personalized tutoring component. With our team of experienced tutors, students receive individualized attention and support to enhance their academic skills in specific subjects or areas of focus.</p>
+                          <p>Flexible Learning Options: With our online platform, students have the flexibility to learn at their own pace and on their own schedule. They can choose from a variety of classes and camps, accessing educational resources whenever and wherever they want.</p>
+                          <p>Interactive and Engaging: Our live classes and on-demand sessions are designed to be interactive and engaging. Students can actively participate, ask questions, and collaborate with their peers. Our experienced instructors create a supportive and dynamic learning environment that fosters curiosity and promotes a love for learning.</p>
+                          <p>Prevent Summer Learning Loss: By participating in Unlimited Summer Learning, students can prevent the summer slide and ensure their academic progress continues during the summer break. Our program offers a seamless blend of education and fun, keeping students intellectually stimulated while enjoying their summer.</p>
+                          <p>Empower your students with Unlimited Summer Learning and provide them with an enriching and rewarding summer experience. With our comprehensive program, personalized tutoring, and flexible learning options, students can make the most of their summer while building essential skills and knowledge.</p>
+                        </div>
+                      </div>
+                      
+                      
+                      
+                      
+                      </div>
+                   
+                    </div>
+                    
+                </div>
+ </section>
+    <!-- Service End -->
+    <section class=" py-5 bg-primary" style="height: 20px;">
+      <div class="container">
+       
+        <div class="text-center">
+            <h6 class="section-title  text-center text-white px-3">   Ready to take the next step?
+                Let's Talk!</h6>
+            <h1 class="mb-5"></h1>
+        </div>
+      </div>
+    </section>
+ <section id="contactus">
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+    
+        <div class="container mt-5">
+        
+          
+                <div class="card mt-5 active-card">
+                  <div class="card-body col-md-6 offset-md-3">
+                    <h5 class="card-title">Which of the following best describes you?</h5>
+                  
+                    <div class="radio-group">
+                        <label for="option2">    <input class="option-input radio" onclick="navigateToAnchor('/organizationscontactform')" type="radio" name="question1" id="option2" value="option2">Owner</label>
+                        <br>    <label for="option1"><input class="option-input radio" onclick="navigateToAnchor('/organizationscontactform')" type="radio" name="question1" id="option1" value="option1">School Administrator
+                            
+                            </label>
+                      <br>
+                     <label for="option3"><input  class="option-input radio" type="radio"  onclick="navigateToAnchor('/')" name="question1" id="option3" value="option3">Other</label>
+                        
+                    </div>
+                  </div>
+                </div>
+                <a id="owner"></a>
+                <!-- Owner content goes here -->
+                
+                <a id="admin"></a>
+                <!-- School Administrator content goes here -->
+                
+                <a id="other"></a>
+                <!-- Other content goes here -->
+                
+                <script>
+                  function navigateToAnchor(anchorId) {
+                    window.location.href = anchorId;
+                  }
+                </script>
+            
+                
+                
+                
+                
+                
+          </div>
+        
+        
+       
+    </div>
+ </section>
+
+
+    <!-- Testimonial End -->
+        
+
+    <!-- Footer Start -->
+    <%- include ('./partials/footer') %>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+  var currentStep = 1;
+  var form = document.querySelector('form');
+  var cards = Array.from(form.querySelectorAll('.card'));
+
+  cards.forEach(function (card) {
+    card.style.display = 'none';
+  });
+
+  cards[currentStep - 1].style.display = 'block';
+
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    if (currentStep < cards.length) {
+      cards[currentStep - 1].style.display = 'none';
+      currentStep++;
+      cards[currentStep - 1].style.display = 'block';
+      updateProgressBar();
+    }else{
+        form.submit();
+    }
+  });
+
+  function updateProgressBar() {
+    var progressPercentage = (currentStep / cards.length) * 100;
+    var progressBar = document.querySelector('.progress-bar');
+    progressBar.style.width = progressPercentage + '%';
+    progressBar.textContent = 'Step ' + currentStep;
+  }
+});
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+<style>
+    /* Custom CSS for fixed top header */
+    body {
+      padding-top: 50px; /* Add padding to body to prevent content from being hidden behind the fixed header */
+    }
+
+    .fixed-top-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1030;
+    }
+
+    .content-div {
+      margin-top: 70px; /* Add margin-top to push content below the fixed header */
+    }
+  </style>
+
+
+<nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0" style="margin-top: 0%;">
+  <a href="/" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+      <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>ENTEL EDUCATION</h2>
+  </a>
+  <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="navbar-nav ms-auto p-4 p-lg-0">
+          <a href="/" id="homelink" class="nav-item nav-link">Home</a>
+         
+          <div class="nav-item dropdown">
+            <a href="#"  id="aboutlink" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About Us</a>
+            <div class="dropdown-menu fade-down m-0">
+              <a href="/about" class="dropdown-item">About</a>
+             
+              <a href="/team" class="dropdown-item">Our Team</a>
+              <a href="/contact" class="dropdown-item">Contact Us</a>
+            </div>
+        </div>
+          <a href="/enrichments" id="enrichmentslink" class="nav-item nav-link">Enrichments</a>
+      
+        
+          <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="academicsDropdown" role="button" data-bs-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">Academics</a>
+            <div class="dropdown-menu" aria-labelledby="academicsDropdown">
+             
+             
+              <a class="dropdown-item" href="/acadamics-lowgrade-tutor">Mathematics</a>
+              <a class="dropdown-item" href="#">Science</a>
+              <a class="dropdown-item" href="#">Language Arts</a>
+              <a class="dropdown-item" href="#">Social Sciences</a>
+              <a class="dropdown-item" href="#">Foreign Languages</a>
+              <a class="dropdown-item" href="#">Computer Science</a>
+              <a class="dropdown-item" href="#">Test Preparation</a>
+              <a class="dropdown-item" href="#">Academic Skills</a>
+              <a class="dropdown-item" href="#">Other Subjects</a>
+            </div>
+              <!-- <div class="dropdown-menu fade-down m-0">
+                  <a href="/acadamics-lowgrade-tutor" class="dropdown-item">Grade 1-8</a>
+                 
+              </div> -->
+          </div>
+         
+        <a href="/forschools" id="forschools" class="nav-item nav-link">For Organizations</a>
+          <a href="/search-for-tutor" class="nav-item nav-link"><i class="fas fa-search"></i></a>
+          <a href="/apply-for-becoming-tutor" id="becometutor" class="nav-item nav-link">Become a Tutor</a>
+          <!-- <a href="/login" id="signinlink" class="nav-item nav-link">Sign In</a> -->
+      </div>
+      <!-- <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a> -->
+  </div>
+</nav>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top fixed-top-header" style="height: 40px; margin-bottom: 0%;">
+  <div class="container">
+      <a class="navbar-brand mx-auto" href="tel:0000">We're open! Call now: (0000)</a>
+  </div>
+  <!-- Add your header navigation items here -->
+</nav>
+  
+<script>
+  // Get the current URL pathname
+  var currentPath = window.location.pathname;
+
+  // Find the link corresponding to the current route and add the "active" class
+  if (currentPath === '/') {
+    document.getElementById('homelink').classList.add('active');
+  } else if (currentPath === '/about') {
+    document.getElementById('aboutlink').classList.add('active');
+  } else if (currentPath === '/enrichments') {
+    document.getElementById('enrichmentslink').classList.add('active');
+  } else if (currentPath === '/applyforbecomingtutor') {
+    document.getElementById('becometutor').classList.add('active');
+  } else if (currentPath === '/signin') {
+    document.getElementById('signlink').classList.add('active');
+  } else if(currentPath === '/forschools'){
+    document.getElementById('forschools').classList.add('active');
+  }
+  
+
+</script>
