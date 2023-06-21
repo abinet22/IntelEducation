@@ -50,7 +50,14 @@ res.render('organizationscontactform');
 router.get('/search-for-tutor', forwardAuthenticated, async (req, res) =>{
 res.render('search');
 });
-        
+router.get('/oshatrainings', forwardAuthenticated, async (req, res) =>{
+    res.render('osha');
+    });
+            
+    router.get('/educationconsultancy', forwardAuthenticated, async (req, res) =>{
+        res.render('educationconsultancy');
+        });
+                                
                                 
 router.get('/login', forwardAuthenticated, async (req, res) =>{
 res.render('login');
