@@ -15,8 +15,8 @@ router.get('/about', forwardAuthenticated, async (req, res) =>{
 res.render('about');
 });
 
-router.get('/enrichments', forwardAuthenticated, async (req, res) =>{
-res.render('enrichments');
+router.get('/codeprogramming', forwardAuthenticated, async (req, res) =>{
+res.render('codeprogramming');
 })
 
 router.get('/team', forwardAuthenticated, async (req, res) =>{
@@ -29,9 +29,12 @@ res.render('contact');
 router.get('/forschools', forwardAuthenticated, async (req, res) =>{
 res.render('forschools');
 });
-
-router.get('/acadamics-lowgrade-tutor', forwardAuthenticated, async (req, res) =>{
-res.render('acadamics-lowgrade-tutor');
+router.get('/stem', forwardAuthenticated, async (req, res) =>{
+    res.render('stem');
+    });
+    
+router.get('/acadamicssearchtutor/(:category)', forwardAuthenticated, async (req, res) =>{
+res.render('acadamicssearchtutor',{category:req.params.category});
 });
 router.get('/apply-for-becoming-tutor', forwardAuthenticated, async (req, res) =>{
 res.render('applyforbecomingtutor');

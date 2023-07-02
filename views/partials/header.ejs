@@ -17,7 +17,24 @@
     }
   </style>
 
-
+<style>
+  .dropdown-menu li {
+  position: relative;
+}
+.dropdown-menu .dropdown-submenu {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: -7px;
+}
+.dropdown-menu .dropdown-submenu-left {
+  right: 100%;
+  left: auto;
+}
+.dropdown-menu > li:hover > .dropdown-submenu {
+  display: block;
+}
+</style>
 <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0" style="margin-top: 0%;">
   <a href="/" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
     <img src="../../img/logo.jpg" style="height: 50px; width: 100%;">
@@ -47,38 +64,134 @@
            
             <a class="dropdown-item" href="/oshatrainings">OSH Training And Consultancy</a>
             <a class="dropdown-item" href="/educationconsultancy">Education Consultancy</a>
-         
+           
+            
           </div>
-            <!-- <div class="dropdown-menu fade-down m-0">
-                <a href="/acadamics-lowgrade-tutor" class="dropdown-item">Grade 1-8</a>
-               
-            </div> -->
+         
         </div>
-          <a href="/enrichments" id="enrichmentslink" class="nav-item nav-link">Enrichments</a>
-      
-        
+    
+       <div class="dropdown">
+        <a
+          class="nav-link dropdown-toggle"
+          type="button"
+          id="dropdownMenuButton"
+          data-mdb-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Acadamics
+       </a>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+         <li> <a class="dropdown-item" href="/acadamicssearchtutor/mathematics">Mathematics</a></li>
+         
+         <li><a class="dropdown-item" href="/acadamicssearchtutor/language">Business &raquo;</a>
+         
+          <ul class="dropdown-menu dropdown-submenu">
+            <li>
+              <a class="dropdown-item" href="#">All Business</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Business Calculus</a>
+            </li>
+           
+            <li>
+              <a class="dropdown-item" href="#">MBA</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Marketing</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Supply Chain Management</a>
+            </li>
+          
+            <li>
+              <a class="dropdown-item" href="#">Finance</a>
+            </li>
+          </ul>
+        </li>
+       
+         <li> <a class="dropdown-item" href="/acadamicssearchtutor/foreignlanguage">Foreign Languages</a></li>
+         <li> <a class="dropdown-item" href="/acadamicssearchtutor/computerscience">Computer Science</a></li>
+         <li> <a class="dropdown-item" href="/acadamicssearchtutor/testpreparation">Test Preparation</a></li>
+         <li><a class="dropdown-item" href="/acadamicssearchtutor/skill">Academic Skills</a></li>
+         <li> <a class="dropdown-item" href="/acadamicssearchtutor/othersubject">Other Subjects</a></li>
+          <li><a class="dropdown-item" href="/acadamicssearchtutor/science">Science &raquo;</a>
+            
+            <ul class="dropdown-menu dropdown-submenu">
+              <li>
+                <a class="dropdown-item" href="#">Submenu item 1</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Submenu item 2</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Submenu item 3 &raquo; </a>
+                <ul class="dropdown-menu dropdown-submenu">
+                  <li>
+                    <a class="dropdown-item" href="#">Multi level 1</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Multi level 2</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Submenu item 4</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Submenu item 5</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a class="dropdown-item" href="/acadamicssearchtutor/socialscience">Social Sciences &raquo;</a>
+           
+            <ul class="dropdown-menu dropdown-submenu">
+              <li>
+                <a class="dropdown-item" href="#">Submenu item 1</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Submenu item 2</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Submenu item 3 &raquo; </a>
+                <ul class="dropdown-menu dropdown-submenu">
+                  <li>
+                    <a class="dropdown-item" href="#">Multi level 1</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Multi level 2</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Submenu item 4</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Submenu item 5</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
           <div class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="academicsDropdown" role="button" data-bs-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">Academics</a>
+            aria-haspopup="true" aria-expanded="false">Enrichments</a>
             <div class="dropdown-menu" aria-labelledby="academicsDropdown">
              
              
-              <a class="dropdown-item" href="/acadamics-lowgrade-tutor">Mathematics</a>
-              <a class="dropdown-item" href="#">Science</a>
-              <a class="dropdown-item" href="#">Language Arts</a>
-              <a class="dropdown-item" href="#">Social Sciences</a>
-              <a class="dropdown-item" href="#">Foreign Languages</a>
-              <a class="dropdown-item" href="#">Computer Science</a>
-              <a class="dropdown-item" href="#">Test Preparation</a>
-              <a class="dropdown-item" href="#">Academic Skills</a>
-              <a class="dropdown-item" href="#">Other Subjects</a>
+              <a class="dropdown-item" href="/personaldevelopment">Personal Development</a>
+              <a class="dropdown-item" href="/stem">STEM</a>
+              <a class="dropdown-item" href="/language">Language/Summer Camp</a>
+              <a class="dropdown-item" href="/codeprogramming">Coding</a>
             </div>
               <!-- <div class="dropdown-menu fade-down m-0">
                   <a href="/acadamics-lowgrade-tutor" class="dropdown-item">Grade 1-8</a>
                  
               </div> -->
           </div>
-         
+        
+      
+          
         <a href="/forschools" id="forschools" class="nav-item nav-link">For Organizations</a>
           <a href="/search-for-tutor" class="nav-item nav-link"><i class="fas fa-search"></i></a>
           <a href="/apply-for-becoming-tutor" id="becometutor" class="nav-item nav-link">Become a Tutor</a>
@@ -114,4 +227,21 @@
   }
   
 
+</script>
+<script>
+  $('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
+  if (!$(this).next().hasClass('show')) {
+    $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
+  }
+  var $subMenu = $(this).next(".dropdown-menu");
+  $subMenu.toggleClass('show');
+
+
+  $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
+    $('.dropdown-submenu .show').removeClass("show");
+  });
+
+
+  return false;
+});
 </script>
