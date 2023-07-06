@@ -8,57 +8,85 @@ const path = require("path");
 const Op = db.Sequelize.Op;
 const { v4: uuidv4 } = require('uuid');
 router.get('/', forwardAuthenticated, async (req, res) =>{
-res.render('index');
+    const category = await db.Category.findAll({where:{is_active:'Yes'}})
+    const subcategory =await  db.Subcategory.findAll({where:{is_active:'Yes'}})
+res.render('index',{category:category,subcategory:subcategory});
 });
 
 router.get('/about', forwardAuthenticated, async (req, res) =>{
-res.render('about');
+    const category = await db.Category.findAll({where:{is_active:'Yes'}})
+    const subcategory =await  db.Subcategory.findAll({where:{is_active:'Yes'}})
+res.render('about',{category:category,subcategory:subcategory});
 });
 
 router.get('/codeprogramming', forwardAuthenticated, async (req, res) =>{
-res.render('codeprogramming');
+    const category = await db.Category.findAll({where:{is_active:'Yes'}})
+    const subcategory =await  db.Subcategory.findAll({where:{is_active:'Yes'}})
+res.render('codeprogramming',{category:category,subcategory:subcategory});
 })
 
 router.get('/team', forwardAuthenticated, async (req, res) =>{
-res.render('team');
+    const category = await db.Category.findAll({where:{is_active:'Yes'}})
+    const subcategory =await  db.Subcategory.findAll({where:{is_active:'Yes'}})
+res.render('team',{category:category,subcategory:subcategory});
 });
 
 router.get('/contact', forwardAuthenticated, async (req, res) =>{
-res.render('contact');
+    const category = await db.Category.findAll({where:{is_active:'Yes'}})
+    const subcategory =await  db.Subcategory.findAll({where:{is_active:'Yes'}})
+res.render('contact',{category:category,subcategory:subcategory});
 });
 router.get('/forschools', forwardAuthenticated, async (req, res) =>{
-res.render('forschools');
+    const category = await db.Category.findAll({where:{is_active:'Yes'}})
+    const subcategory =await  db.Subcategory.findAll({where:{is_active:'Yes'}})
+res.render('forschools',{category:category,subcategory:subcategory});
 });
 router.get('/stem', forwardAuthenticated, async (req, res) =>{
-    res.render('stem');
+    const category = await db.Category.findAll({where:{is_active:'Yes'}})
+    const subcategory =await  db.Subcategory.findAll({where:{is_active:'Yes'}})
+    res.render('stem',{category:category,subcategory:subcategory});
     });
     
 router.get('/acadamicssearchtutor/(:category)', forwardAuthenticated, async (req, res) =>{
-res.render('acadamicssearchtutor',{category:req.params.category});
+    const category = await db.Category.findAll({where:{is_active:'Yes'}})
+    const subcategory =await  db.Subcategory.findAll({where:{is_active:'Yes'}})
+res.render('acadamicssearchtutor',{searchcategory:req.params.category,category:category,subcategory:subcategory});
 });
 router.get('/apply-for-becoming-tutor', forwardAuthenticated, async (req, res) =>{
-res.render('applyforbecomingtutor');
+    const category = await db.Category.findAll({where:{is_active:'Yes'}})
+    const subcategory =await  db.Subcategory.findAll({where:{is_active:'Yes'}})
+res.render('applyforbecomingtutor',{category:category,subcategory:subcategory});
 });
 
 router.get('/tutor-application-form', forwardAuthenticated, async (req, res) =>{
-res.render('tutorapplicationform');
+    const category = await db.Category.findAll({where:{is_active:'Yes'}})
+    const subcategory =await  db.Subcategory.findAll({where:{is_active:'Yes'}})
+res.render('tutorapplicationform',{category:category,subcategory:subcategory});
 });
    
     
 router.get('/organizationscontactform', forwardAuthenticated, async (req, res) =>{
-res.render('organizationscontactform');
+    const category = await db.Category.findAll({where:{is_active:'Yes'}})
+    const subcategory =await  db.Subcategory.findAll({where:{is_active:'Yes'}})
+res.render('organizationscontactform',{category:category,subcategory:subcategory});
 });
             
     
 router.get('/search-for-tutor', forwardAuthenticated, async (req, res) =>{
-res.render('search');
+    const category = await db.Category.findAll({where:{is_active:'Yes'}})
+    const subcategory =await  db.Subcategory.findAll({where:{is_active:'Yes'}})
+res.render('search',{category:category,subcategory:subcategory});
 });
 router.get('/oshatrainings', forwardAuthenticated, async (req, res) =>{
-    res.render('osha');
+    const category = await db.Category.findAll({where:{is_active:'Yes'}})
+    const subcategory =await  db.Subcategory.findAll({where:{is_active:'Yes'}})
+    res.render('osha',{category:category,subcategory:subcategory});
     });
             
     router.get('/educationconsultancy', forwardAuthenticated, async (req, res) =>{
-        res.render('educationconsultancy');
+        const category = await db.Category.findAll({where:{is_active:'Yes'}})
+        const subcategory =await  db.Subcategory.findAll({where:{is_active:'Yes'}})
+        res.render('educationconsultancy',{category:category,subcategory:subcategory});
         });
                                 
                                 

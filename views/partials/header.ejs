@@ -70,7 +70,8 @@
          
         </div>
     
-       <div class="dropdown">
+    
+      <div class="dropdown">
         <a
           class="nav-link dropdown-toggle"
           type="button"
@@ -80,98 +81,32 @@
         >
           Acadamics
        </a>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-         <li> <a class="dropdown-item" href="/acadamicssearchtutor/mathematics">Mathematics</a></li>
-         
-         <li><a class="dropdown-item" href="/acadamicssearchtutor/language">Business &raquo;</a>
-         
-          <ul class="dropdown-menu dropdown-submenu">
+       <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <% if (category.length > 0) { %>
+          <% category.forEach(function (cat) { %>
+            <% var maincat = cat.catid; %>
             <li>
-              <a class="dropdown-item" href="#">All Business</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#">Business Calculus</a>
-            </li>
-           
-            <li>
-              <a class="dropdown-item" href="#">MBA</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#">Marketing</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#">Supply Chain Management</a>
-            </li>
-          
-            <li>
-              <a class="dropdown-item" href="#">Finance</a>
-            </li>
-          </ul>
-        </li>
-       
-         <li> <a class="dropdown-item" href="/acadamicssearchtutor/foreignlanguage">Foreign Languages</a></li>
-         <li> <a class="dropdown-item" href="/acadamicssearchtutor/computerscience">Computer Science</a></li>
-         <li> <a class="dropdown-item" href="/acadamicssearchtutor/testpreparation">Test Preparation</a></li>
-         <li><a class="dropdown-item" href="/acadamicssearchtutor/skill">Academic Skills</a></li>
-         <li> <a class="dropdown-item" href="/acadamicssearchtutor/othersubject">Other Subjects</a></li>
-          <li><a class="dropdown-item" href="/acadamicssearchtutor/science">Science &raquo;</a>
-            
-            <ul class="dropdown-menu dropdown-submenu">
-              <li>
-                <a class="dropdown-item" href="#">Submenu item 1</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="#">Submenu item 2</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="#">Submenu item 3 &raquo; </a>
+              <a class="dropdown-item" href="/acadamicssearchtutor/science"><%= cat.catname %></a>
+              <% var subcatList = subcategory.filter(function (subcat) {
+                return subcat.catid === maincat;
+              }); %>
+              <% if (subcatList.length > 0) { %>
                 <ul class="dropdown-menu dropdown-submenu">
-                  <li>
-                    <a class="dropdown-item" href="#">Multi level 1</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">Multi level 2</a>
-                  </li>
+                  <% subcatList.forEach(function (subcat) { %>
+                    <li>
+                      <a class="dropdown-item" href="#"><%= subcat.subcatname %></a>
+                    </li>
+                  <% }) %>
                 </ul>
-              </li>
-              <li>
-                <a class="dropdown-item" href="#">Submenu item 4</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="#">Submenu item 5</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a class="dropdown-item" href="/acadamicssearchtutor/socialscience">Social Sciences &raquo;</a>
-           
-            <ul class="dropdown-menu dropdown-submenu">
-              <li>
-                <a class="dropdown-item" href="#">Submenu item 1</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="#">Submenu item 2</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="#">Submenu item 3 &raquo; </a>
-                <ul class="dropdown-menu dropdown-submenu">
-                  <li>
-                    <a class="dropdown-item" href="#">Multi level 1</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">Multi level 2</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a class="dropdown-item" href="#">Submenu item 4</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="#">Submenu item 5</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
+              <% } %>
+            </li>
+          <% }) %>
+        <% } else { %>
+          <!-- Handle empty category case -->
+        <% } %>
+      </ul>
+      
+      
       </div>
           <div class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="academicsDropdown" role="button" data-bs-toggle="dropdown"
