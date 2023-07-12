@@ -79,7 +79,7 @@
           <%- include ('./partials/messages') %>
             <!-- Login Form -->
             <div class="text-center">
-                <h6 class="section-title bg-white text-center text-primary px-3">Entel Education Application Form</h6>
+                <h6 class="section-title bg-white text-center text-primary px-3">Entel Education Tutor Application Form</h6>
                 <h1 class="mb-5"></h1>
             </div>
             <div class="col-md-10 offset-md-1">
@@ -90,19 +90,19 @@
                         <div class="stepwizard-row setup-panel">
                           <div class="stepwizard-step">
                             <a href="#step-1" type="button" class="btn btn-primary btn-circle">1</a>
-                            <p>Step 1</p>
+                            <p></p>
                           </div>
                           <div class="stepwizard-step">
                             <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
-                            <p>Step 2</p>
+                            <p></p>
                           </div>
                           <div class="stepwizard-step">
                             <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
-                            <p>Step 3</p>
+                            <p></p>
                           </div>
                           <div class="stepwizard-step">
                             <a href="#step-4" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
-                            <p>Step 4</p>
+                            <p></p>
                           </div>
                         </div>
                       </div>
@@ -114,12 +114,9 @@
                               <h3> Contact Information</h3>
                               <div class="form-group">
                                 <label class="control-label">First Name</label>
-                                <input maxlength="100" type="text" required="required" name="firstname" id="firstname" class="form-control" placeholder="Enter First Name">
+                                <input maxlength="100" type="text" required="required" name="fullname" id="firstname" class="form-control" placeholder="Enter First Name">
                               </div>
-                              <div class="form-group">
-                                <label class="control-label">Last Name</label>
-                                <input maxlength="100" type="text" required="required" name="lastname" id="lastname" class="form-control" placeholder="Enter Last Name">
-                              </div>
+                            
                               <div class="form-group">
                                 <label class="control-label">Phone Number</label>
                                 <input maxlength="100" type="text" required="required" id="phonenumber"  pattern="09\d{8}" name="phonenumber" class="form-control" placeholder="Enter Phone Number(Start With 09)">
@@ -128,7 +125,7 @@
                                 <label class="control-label">Address</label>
                                 <input required="required" class="form-control" name="address" id="address" placeholder="Enter your address">
                               </div>
-                              <button class="btn btn-primary nextBtn btn-lg pull-right" type="button">Next</button>
+                              <button class="btn btn-primary nextBtn btn-sm pull-right mt-4" type="button">Next</button>
                             </div>
                           </div>
                         </div>
@@ -172,8 +169,8 @@
 
                                       
                                 </div>
-                                  <button class="btn btn-primary prevBtn btn-lg pull-left" type="button">Previous</button>
-                                  <button class="btn btn-primary nextBtn btn-lg pull-right" type="button">Next</button>
+                                  <button class="btn btn-primary prevBtn btn-sm mt-4 pull-left" type="button">Previous</button>
+                                  <button class="btn btn-primary nextBtn btn-sm mt-4 pull-right" type="button">Next</button>
                                 </div>
                               </div>
                         </div>
@@ -277,7 +274,7 @@
           curInputs = curStep.find("input[type='text'],input[type='url']"),
           isValid = true;
           document.getElementById('first-name').textContent = document.getElementById('firstname').value;
-          document.getElementById('last-name').textContent = document.getElementById('lastname').value;
+         
           document.getElementById('phone-number').textContent = document.getElementById('phonenumber').value;
           document.getElementById('addressl').textContent = document.getElementById('address').value;
           document.getElementById('edu-background').textContent = document.getElementById('educational_background').value;

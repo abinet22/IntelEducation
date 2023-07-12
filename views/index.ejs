@@ -29,6 +29,43 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <style>
+      .step {
+        padding: 30px;
+        background-color: #f1f1f1;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        opacity: 0;
+        animation: fadeIn 1s ease-in-out forwards;
+      }
+      
+      .step:nth-child(odd) {
+        background-color: #e9e9e9;
+      }
+  
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+  
+      .step-title {
+        font-size: 24px;
+        margin-bottom: 10px;
+        color: #333333;
+      }
+  
+      .step-description {
+        font-size: 16px;
+        color: #555555;
+        margin-bottom: 20px;
+      }
+    </style>
 </head>
 
 <body>
@@ -122,7 +159,7 @@ As Dr. Ermias and his team members have personal development and human relations
                              
                           </div>
                           <a href="/#whyus" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
-                          <a href="/enrichment" class="btn py-md-3 px-md-5 animated slideInRight" style="background-color:rgb(248, 237, 84);">Start Now</a>
+                          <a href="/stem" class="btn py-md-3 px-md-5 animated slideInRight" style="background-color:rgb(248, 237, 84);">Start Now</a>
                       </div>
                   </div>
               </div>
@@ -144,7 +181,7 @@ As Dr. Ermias and his team members have personal development and human relations
                                
                                 <a href="/#whyus" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
                                 
-                                <a href="/osha" class="btn py-md-3 px-md-5 animated slideInRight"  style="background-color:rgb(248, 237, 84);">Start Now</a>
+                                <a href="/oshatrainings" class="btn py-md-3 px-md-5 animated slideInRight"  style="background-color:rgb(248, 237, 84);">Start Now</a>
                             </div>
                         </div>
                     </div>
@@ -180,14 +217,18 @@ As Dr. Ermias and his team members have personal development and human relations
 
     <section class="container-xxl py-5 category">
         <div class="container">
-            <div class="row">
-              <div class="col-lg-8 offset-lg-2">
-                <div class="tutors-section">
-                
-                  <div class="text-center">
+           <div class="text-center">
                     <h6 class="section-title bg-white text-center text-primary px-3">Our Tutors</h6>
                     <h1 class="mb-5"></h1>
                 </div>
+            <div class="row">
+                <div class="col-lg-4">
+                  <img  src="../../img/ourtutor.png">
+                </div>
+              <div class="col-lg-8 ">
+                <div class="tutors-section">
+                
+                 
                   <p>
                     Our tutors are highly qualified professionals dedicated to helping students succeed academically. We carefully select tutors who possess the necessary expertise, knowledge, and teaching experience in their respective subjects.
                   </p>
@@ -219,15 +260,19 @@ As Dr. Ermias and his team members have personal development and human relations
     <section class="container-xxl py-5" id="whyus">
         <div class="container">
             <div class="container">
-                <div class="row">
-                  <div class="col-lg-8 offset-lg-2">
-                    <div class="why-us-section">
-                        <div class="text-center">
+               <div class="text-center">
                             <h6 class="section-title bg-white text-center text-primary px-3">Why Choose Us?</h6>
                             <h1 class="mb-5"></h1>
                         </div>
                     
-                      <ul>
+                <div class="row">
+                      <div class="col-lg-4">
+                  <img  src="../../img/whyus2.png">
+                </div>
+                  <div class="col-lg-8 ">
+                    <div class="why-us-section " style="margin-top: 100px; margin-left: 150px;">
+                       
+                      <ul style=" list-style-type: none;">
                         <li>
                           <strong>Highly Qualified Tutors:</strong> We carefully select our tutors based on their qualifications, expertise, and teaching experience.
                         </li>
@@ -307,7 +352,7 @@ As Dr. Ermias and his team members have personal development and human relations
     <section class="container-xxl py-5">
         <div class="container">
             <div class="row">
-              <div class="col-lg-8 offset-lg-2">
+              <div class="col-lg-12">
                 <div class="become-tutor-section">
               
                   <div class="text-center">
@@ -322,17 +367,43 @@ As Dr. Ermias and his team members have personal development and human relations
                   </p>
                   <p>
                     To become a tutor, simply follow these steps:
+                    <div class="container">
+                      <div class="row">
+                        <div class="">
+                          <div class="step">
+                            <h2 class="step-title">Step 1: Fill out the Application</h2>
+                            <p class="step-description">Fill out our online application form, providing your personal information, educational background, and areas of expertise.</p>
+                          </div>
+                          <div class="step">
+                            <h2 class="step-title">Step 2: Showcase Your Skills</h2>
+                            <p class="step-description">Demonstrate your qualifications by highlighting your educational achievements, relevant certifications, teaching experience, and any other relevant credentials.</p>
+                          </div>
+                          <div class="step">
+                            <h2 class="step-title">Step 3: Subject Assessment</h2>
+                            <p class="step-description">Depending on the subject you wish to tutor, you may be required to complete a subject-specific assessment or provide samples of your work to evaluate your proficiency.</p>
+                          </div>
+                          <div class="step">
+                            <h2 class="step-title">Step 4: Interview Process</h2>
+                            <p class="step-description">If your application meets our criteria, you will be invited for an interview to discuss your teaching philosophy, approach, and suitability for the tutoring role.</p>
+                          </div>
+                          <div class="step">
+                            <h2 class="step-title">Step 5: Background Check</h2>
+                            <p class="step-description">As part of our commitment to ensuring the safety of our students, we conduct background checks on all potential tutors to maintain a secure learning environment.</p>
+                          </div>
+                          <div class="step">
+                            <h2 class="step-title">Step 6: Training and Support</h2>
+                            <p class="step-description">Once selected, you will undergo training and receive guidance on our tutoring processes, methodologies, and tools to enhance your tutoring skills.</p>
+                          </div>
+                          <div class="step">
+                            <h2 class="step-title">Step 7: Start Tutoring</h2>
+                            <p class="step-description">After completing the onboarding process, you will be ready to start tutoring students. We will match you with students based on their needs, your expertise, and availability.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                   
                   </p>
-                  <ol>
-                    <li>Complete the Application: Fill out our online application form, providing your personal information, educational background, and areas of expertise.</li>
-                    <li>Showcase Your Skills: Demonstrate your qualifications by highlighting your educational achievements, relevant certifications, teaching experience, and any other relevant credentials.</li>
-                    <li>Subject Assessment: Depending on the subject you wish to tutor, you may be required to complete a subject-specific assessment or provide samples of your work to evaluate your proficiency.</li>
-                    <li>Interview Process: If your application meets our criteria, you will be invited for an interview to discuss your teaching philosophy, approach, and suitability for the tutoring role.</li>
-                    <li>Background Check: As part of our commitment to ensuring the safety of our students, we conduct background checks on all potential tutors to maintain a secure learning environment.</li>
-                    <li>Training and Support: Once selected, you will undergo training and receive guidance on our tutoring processes, methodologies, and tools to enhance your tutoring skills.</li>
-                    <li>Start Tutoring: After completing the onboarding process, you will be ready to start tutoring students. We will match you with students based on their needs, your expertise, and availability.</li>
-                  </ol>
-                  <p>
+                
                     As a tutor with us, you will have the opportunity to make a difference in students' lives, inspire learning, and contribute to their academic success. You will have the flexibility to set your availability and schedule tutoring sessions that fit your lifestyle.
                   </p>
                   <p>
@@ -358,6 +429,7 @@ As Dr. Ermias and his team members have personal development and human relations
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.bundle.min.js"></script>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

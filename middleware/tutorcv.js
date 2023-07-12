@@ -14,10 +14,10 @@ var storage = multer.diskStorage({
   
   },
   filename: (req, file, cb) => {
-    cb(null, `${Date.now()}-TOTProfile-${file.originalname}`);
+    cb(null, `${Date.now()}-EntelTutorCV-${file.originalname}`);
 
   },
 });
-var totphoto = multer({ storage: storage, fileFilter: imageFilter });
+var tutorcv = multer({ storage: storage, fileFilter: imageFilter });
 
-module.exports = totphoto;
+module.exports = tutorcv;

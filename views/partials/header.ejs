@@ -86,7 +86,7 @@
           <% category.forEach(function (cat) { %>
             <% var maincat = cat.catid; %>
             <li>
-              <a class="dropdown-item" href="/acadamicssearchtutor/science"><%= cat.catname %></a>
+              <a class="dropdown-item" href="/acadamicssearchtutor/<%= cat.catname %>"><%= cat.catname %></a>
               <% var subcatList = subcategory.filter(function (subcat) {
                 return subcat.catid === maincat;
               }); %>
@@ -94,7 +94,7 @@
                 <ul class="dropdown-menu dropdown-submenu">
                   <% subcatList.forEach(function (subcat) { %>
                     <li>
-                      <a class="dropdown-item" href="#"><%= subcat.subcatname %></a>
+                      <a class="dropdown-item" href="/acadamicssearchtutor/<%= subcat.subcatname %>"><%= subcat.subcatname %></a>
                     </li>
                   <% }) %>
                 </ul>
@@ -116,7 +116,7 @@
              
               <a class="dropdown-item" href="/personaldevelopment">Personal Development</a>
               <a class="dropdown-item" href="/stem">STEM</a>
-              <a class="dropdown-item" href="/language">Language/Summer Camp</a>
+              <a class="dropdown-item" href="/summercamp">Summer Camp</a>
               <a class="dropdown-item" href="/codeprogramming">Coding</a>
             </div>
               <!-- <div class="dropdown-menu fade-down m-0">
